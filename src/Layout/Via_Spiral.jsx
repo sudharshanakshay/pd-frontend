@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Figure, Row } from "react-bootstrap";
-import { sendTestImage } from "../Actions/DiagnoseAction";
+import { diagnoseViaWaveImg } from "../Actions/DiagnoseAction";
 import TopNavbar from "../Components/NavBar/TopNavbar";
 
 
@@ -8,13 +8,12 @@ const Via_Spiral = () => {
 
     const [formData, setFormData] = useState();
     useEffect(() => {
-        sendTestImage();
+        // diagnoseViaWaveImg();
     }, [])
     
 
     const previewSelectedData = () => {
         const select_image = document.getElementById('select_image');
-
         const file = select_image.files[0];
 
         if (file) {
@@ -45,7 +44,7 @@ const Via_Spiral = () => {
                     {/* ---------- select image file ---------- */}
 
                     <Col >
-                            <h4>Draw waves in paper, scan and Upload here ..</h4>
+                            <h4>Draw Spiral in paper, scan and Upload here ..</h4>
                             <input id="select_image" type='file' accept="image/*" onChange={previewSelectedData} />
                             <br/><br/>
                             <label>Diagonise : &nbsp;</label>
@@ -56,15 +55,17 @@ const Via_Spiral = () => {
                     <Col>
                         <h5>Preview Uploaded</h5>
                         <Row className="mt-5">
-                            <h3>Preview</h3>
+                            <h3>Preview Wave</h3>
 
-                            <Figure >
+                            <Figure 
+                                className="figure">
                                 <Figure.Image
+                                    
                                     id='preview_image'
                                     width='100%'
                                     alt="select image"
                                 />
-                                <Figure.Caption className="d-flex justify-content-center" style={{ color: 'green' }}>
+                                <Figure.Caption className="d-flex justify-content-center" style={{ color: 'ButtonShadow' }}>
                                     Selected image
                                 </Figure.Caption>
                             </Figure>

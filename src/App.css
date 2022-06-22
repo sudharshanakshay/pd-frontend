@@ -1,3 +1,18 @@
+.nav-item {
+  display: block;
+  padding: 4px;
+  margin: 6px;
+  text-decoration: none;
+  font-size: larger;
+  color: #ffffff;
+}
+
+.figure {
+  border-style: solid;
+  border-color: green;
+  border-width: 1px;
+}
+
 .App {
   text-align: center;
 }

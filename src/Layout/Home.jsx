@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Figure, Row } from "react-bootstrap";
-import { sendTestImage } from "../Actions/DiagnoseAction";
+import { diagnoseViaWaveImg } from "../Actions/DiagnoseAction";
 import TopNavbar from "../Components/NavBar/TopNavbar";
 
 
@@ -8,7 +8,7 @@ const Home = () => {
 
     const [formData, setFormData] = useState();
     useEffect(() => {
-        sendTestImage();
+        diagnoseViaWaveImg();
     }, [])
     
 

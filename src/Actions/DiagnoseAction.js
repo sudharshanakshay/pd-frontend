@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 // ----------------- Configuration data -----------------
 
@@ -10,19 +10,12 @@ export const CONFIG = {
       }
 }
 
-export const sendTestImage = async () => {
-    const text = 'test text !';
-    // const body = JSON.parse(text)
+export const diagnoseViaWaveImg = async () => {
 
-    
-    // await axios.post('http://localhost:5000/', {text : 'hello'}, CONFIG);
-    // await fetch('/data').then((res) => {
-    //     res.json().then((data) =>{
-    //         console.log(data);
-    //     }) 
-    // })
-
-    await fetch('/diagnose').then((res) => {
+    console.log('diagnose !');
+    await axios.post('http://localhost:5000/diagnose', CONFIG)
+    .then((res) => {
+        console.log(res);
         res.json().then((data) => console.log(data))
     })
 }
