@@ -4,7 +4,7 @@ import { sendTestImage } from "../Actions/DiagnoseAction";
 import TopNavbar from "../Components/NavBar/TopNavbar";
 
 
-const Home = () => {
+const Via_Spiral = () => {
 
     const [formData, setFormData] = useState();
     useEffect(() => {
@@ -78,4 +78,4 @@ const Home = () => {
 }
 
 
-export default Home;
+export default Via_Spiral;
